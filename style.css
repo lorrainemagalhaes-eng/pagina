@@ -1,1 +1,93 @@
 
+/* Configurações básicas */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal da calculadora */
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    background-color: #333; /* Fundo escuro */
+    padding: 20px;
+}
+
+/* Visor/Tela */
+.calculator-screen {
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+    font-size: 2.5em;
+    border: none;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Inclui padding na largura total */
+    border-radius: 5px;
+}
+
+/* Container dos botões */
+.calculator-keys {
+    display: grid;
+    /* 4 colunas de tamanho igual */
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 10px;
+}
+
+/* Estilo geral dos botões */
+.calculator-keys button {
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+/* Botões de números e decimal */
+.calculator-keys button:not(.key--operator):not(.key--equal):not(.key--clear) {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Botões de operadores (+, -, *, /) */
+.key--operator {
+    background-color: #f39c12; /* Laranja */
+    color: #fff;
+}
+
+/* Botão de limpar (AC) */
+.key--clear {
+    background-color: #d9534f; /* Vermelho */
+    color: #fff;
+}
+
+/* Botão de igual (=) */
+.key--equal {
+    background-color: #2ecc71; /* Verde */
+    color: #fff;
+    grid-column: span 2; /* Ocupa 2 colunas */
+}
+
+/* Efeitos de hover (ao passar o mouse) */
+.calculator-keys button:hover {
+    opacity: 0.8;
+}
+
+/* Ajuste para o botão 0 e decimal (pode ser ajustado) */
+.calculator-keys button[value="0"] {
+    grid-column: span 2; /* Faz o 0 ocupar 2 colunas, se desejar */
+}
+
+.key--decimal {
+    background-color: #555;
+}
