@@ -13,7 +13,7 @@ body {
     padding: 20px;
     border-radius: 20px;
     /* Sombra mais marcada para simular um contorno */
-    box-shadow: 0 0 20px rgba(3, 194, 252, 0.5), 0 0 40px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.2);
     text-align: center;
     width: 320px;
 }
@@ -53,7 +53,7 @@ body {
 }
 
 .button.orange {
-    background-color: #f39c12;
+    background-color: #00c3ff;
     color: #fff;
 }
 
